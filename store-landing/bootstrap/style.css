@@ -1,0 +1,73 @@
+/* ============================================================
+   NovaStore — Bootstrap 5.3 custom theme overrides
+   Keeps the page from looking like default Bootstrap.
+   ============================================================ */
+
+/* ---------- Design tokens ---------- */
+:root {
+  --bs-primary: #2563eb;
+  --bs-primary-rgb: 37, 99, 235;
+  --bs-body-font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --bs-body-color: #1e293b;
+  --bs-body-bg: #f8fafc;
+  --brand-accent: #f59e0b;
+}
+
+body { font-family: var(--bs-body-font-family); background: var(--bs-body-bg); color: var(--bs-body-color); overflow-x: hidden; }
+
+/* ---------- Navbar ---------- */
+.custom-nav {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e2e8f0;
+}
+.custom-nav .navbar-brand { font-weight: 700; color: #1e293b; }
+.custom-nav .nav-link { color: #64748b; font-weight: 500; transition: color .2s ease; }
+.custom-nav .nav-link:hover, .custom-nav .nav-link:focus { color: #2563eb; }
+.brand-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: 8px;
+  background: #2563eb; color: #fff; font-weight: 700; margin-right: 6px;
+}
+
+/* ---------- Hero banner ---------- */
+.hero-banner {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #3b82f6 100%);
+  position: relative; overflow: hidden;
+}
+.hero-banner::after {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.25), transparent 45%);
+  pointer-events: none;
+}
+.hero-eyebrow { color: #fcd34d; letter-spacing: .12em; }
+.btn-accent { background: #f59e0b; color: #1e293b; border: none; font-weight: 600; }
+.btn-accent:hover { background: #d97706; color: #fff; }
+
+/* ---------- Product cards ---------- */
+.product-card { border: none; border-radius: 12px; transition: transform .25s ease, box-shadow .25s ease; }
+.product-card:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(15, 23, 42, .12) !important; }
+.product-card .card-img-top { aspect-ratio: 4 / 3; object-fit: cover; }
+.product-card .badge { font-size: .7rem; padding: .35rem .55rem; border-radius: 999px; }
+
+/* ---------- Footer ---------- */
+.site-footer { background: #0f172a; }
+.footer-link { color: #cbd5e1; text-decoration: none; transition: color .2s ease; }
+.footer-link:hover { color: #fff; }
+.social-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255, 255, 255, .08); color: #cbd5e1;
+  font-size: .8rem; font-weight: 600; text-decoration: none;
+  transition: background .2s ease, transform .2s ease;
+}
+.social-btn:hover { background: #2563eb; color: #fff; transform: translateY(-2px); }
+
+/* ---------- Modal ---------- */
+.modal-content { border: none; border-radius: 14px; }
+.modal-header { border-bottom: 1px solid #e2e8f0; }
+.modal-footer { border-top: 1px solid #e2e8f0; }
+
+/* ---------- Global niceties ---------- */
+html { scroll-behavior: smooth; }
+img { max-width: 100%; height: auto; }
